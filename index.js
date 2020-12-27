@@ -11,7 +11,7 @@ var userAnswer = readlinesync.question(chalk.blue('Hello ' + userName + ' ,Do yo
 var score = 0;
 
 if(userAnswer === 'yes'){
-console.log(chalk.keyword('orange')('Try few questions about Ravi, and get your total score! '));
+console.log(chalk.keyword('orange')('Try few questions to know more about Ravi! '));
 }
 else{
   console.log(chalk.green('Hi ' + userName + ', You can Connect with Ravi on Twitter/Linkedin, to know about him @ravipapasani/Ravi Teja Papasani !'));
@@ -28,27 +28,28 @@ else{
   }else{
     console.log(chalk.red('You are Wrong!'));
   }
-  console.log('Your score is ' + score)
+  console.log('Your current score is ' + score)
   }
  }
 
 //Array of Objects
 
 var questions = [{
-  question: "Who is Ravi's favorite bowler?",
-  answer: "Zaheer"
+ question: "Which state Ravi stay currently in US?",
+answer: "Texas"
 },{
-  question: "Who is Ravi's favorite Tv Host?",
-  answer: "Trevor"
+question: "Which Tech Company Ravi like most?",
+answer: 'Microsoft'
 },{
-  question: "What is Ravi's favorite dish?",
-  answer: "Biryani"
+question: "Which Company Ravi works for?",
+ answer: "FedEx"
 },{
-  question: "Where do Ravi stay currently?",
-  answer: "Dallas"
+question: "Who is Ravi's favorite Tv Host?",
+answer: "Trevor"
 },{
-  question: "Which Tech Company Ravi like most?",
-  answer: 'Microsoft'}];
+question: "What is Ravi's last name?",
+ answer: "Papasani"
+}];
 
 //loops
 for(var i=0;i<questions.length;i++){
@@ -62,11 +63,11 @@ console.log(chalk.bold.green('Your final score is ' + score + ' out of ' + quest
 
 //data of high scores
 if(userAnswer === 'yes' && score != 0){
-var highScores = [];
-highScores.push({name:userName,score:score});
-console.log('Below are the Current highScores of the Quiz ');
-console.log( highScores);
-//highScores.name = userName;
-//highScores.score = score;
+var totalScores = [];
+totalScores.push({name:userName,score:score});
+console.log('Below are your total score for this Quiz ');
+console.log( totalScores);
+//totalScores.name = userName;
+//totalScores.score = score;
 }
 
